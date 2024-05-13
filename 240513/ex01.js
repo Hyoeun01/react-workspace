@@ -25,9 +25,11 @@ let u1;
 let u2 = undefined;
 console.log(u1,u2);
 
-let arr=[1,3,4,5];
+// 배열 : 자바스크립트는 다양한 타입의 데이터를 하나의 배열에 넣을 수 있음
+let arr=[1,3,4,5]; // index = 배열에서 상대적인위치
 console.log(arr,arr[0]);
 
 // Object 타입
 let obj = {a:"apple",b:"banana",c:'carrot'};
 console.log(obj,obj.a,obj['b'],obj["c"]);
+

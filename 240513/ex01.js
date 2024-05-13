@@ -33,3 +33,6 @@ console.log(arr,arr[0]);
 let obj = {a:"apple",b:"banana",c:'carrot'};
 console.log(obj,obj.a,obj['b'],obj["c"]);
 
+let c = 2;
+let d = 4;
+console.log(c**d);

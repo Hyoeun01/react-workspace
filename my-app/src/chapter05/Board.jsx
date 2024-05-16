@@ -21,6 +21,11 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center"
     },
+    titleText:{
+        color: "black",
+        fontSize: 20,
+        fontWeight: "bold"
+    },
     nameText:{
         color: "black",
         fontSize: 16,
@@ -29,7 +34,12 @@ const styles = {
     commentText:{
         color: "black",
         fontSize: 16
+    },
+    timeText:{
+        color: "blue",
+        fontSize: 12
     }
+    
 };
 function Board(props){
     return (
@@ -42,7 +52,7 @@ function Board(props){
                 <span style={styles.titleText}>{props.title}</span>
                 <span style={styles.nameText}>{props.name}</span>
                 <span style={styles.commentText}>{props.comment}</span>
-                <span style={styles.timeText}>{new Date().toLocaleTimeString()}</span>
+                <span style={styles.timeText}>{new Date().toLocaleString()}</span>
 
             </div>
         </div>

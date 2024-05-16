@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 import Library from './chapter03/Library';
 import StudentList from './chapter03/StudentList';
+import ConfirmDialog from './chapter04/ConfirmDialog';
+import Clock from './chapter04/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +15,8 @@ root.render(
     {/* <App /> */}
     <Library />
     <StudentList />
+    <ConfirmDialog />
+    <Clock />
   </React.StrictMode>
 );
 

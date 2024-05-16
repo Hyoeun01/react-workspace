@@ -10,15 +10,18 @@ import ConfirmDialog from './chapter04/ConfirmDialog';
 import Clock from './chapter04/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <Library />
-    <StudentList />
-    <ConfirmDialog />
-    <Clock />
-  </React.StrictMode>
-);
+setInterval(() => {
+  root.render(
+    <React.StrictMode>
+      {/* <App /> */}
+      <Library />
+      <StudentList />
+      <ConfirmDialog />
+      <Clock />
+    </React.StrictMode>
+  );
+},1000);
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

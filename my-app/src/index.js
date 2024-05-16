@@ -9,20 +9,22 @@ import StudentList from './chapter03/StudentList';
 import ConfirmDialog from './chapter04/ConfirmDialog';
 import Clock from './chapter04/Clock';
 import PropsEx from './chapter05/PropsEx';
+import CommentList from './chapter05/CommentList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // setInterval(() => {
   root.render(
     <React.StrictMode>
       {/* <App /> */}
-      <Library />
+      {/* <Library />
       <StudentList />
-      <ConfirmDialog />
-      <Clock />
-      <PropsEx />
+      <ConfirmDialog /> */}
+      {/* <Clock /> */}
+      {/* <PropsEx /> */}
+      <CommentList />
     </React.StrictMode>
   );
-// },1000);
+//  },1000);
 
 
 // If you want to start measuring performance in your app, pass a function

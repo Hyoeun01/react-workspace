@@ -7,7 +7,11 @@ function Info(){
     useEffect( ()=>{
         console.log('렌더링 완료');
         console.log({name,nickname});
-    },[name,nickname]);
+        return () =>{
+            console.log('cleanup');
+            console.log(name);
+        }
+    },[name]); // 빈 배열을 넣으면 mount와 unmount 사이에 한번만 작동함, 배열을 생략하면 재렌더링 될때마다 실행됨
 
     const onChangeName = e =>{
         setName(e.target.value);

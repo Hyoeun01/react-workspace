@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
   root.render(
     <React.StrictMode>
-      <App />
+      {/* <App /> */}
       {/* <Library />
       <StudentList />
       <ConfirmDialog /> */}
@@ -28,7 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <CommentList /> */}
       {/* <BoardList /> */}
       {/* <NotificationList /> */}
-      {/* <Counter /> */}
+      <Counter />
       {/* <Info /> */}
     </React.StrictMode>
   );

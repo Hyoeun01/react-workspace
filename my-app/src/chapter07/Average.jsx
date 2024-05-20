@@ -15,12 +15,13 @@ function Average(props){
         setNumber(e.target.value);
     },[]);
 
-    const onInsert= useCallback(e => {
+    // useMemo와 유사하지만 값이 아닌 함수를 반환하며, 의존성 배열에 따라 Memorized 값을 반환한다는 점에서는 동일
+    const onInsert= useCallback(e => { 
         const nextList=list.concat(parseInt(number));
         setList(nextList);
         setNumber('')
     },[number, list]);
-    
+
     // const onChange = e => {
     //     setNumber(e.target.value);
     // };

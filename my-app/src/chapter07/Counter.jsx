@@ -4,6 +4,7 @@ function reducer(state, action){
     switch(action.type){
         case 'INCREMENT': return {value : state.value +1};
         case 'DECREMENT': return {value : state.value -1};
+        default : return state;
     }
 }
 
@@ -17,7 +18,7 @@ function Counter(props){
         </div>
     );
 
-    // //    var count = 0;
+    // var count = 0;
 
     // const [count, setCount]=useState(0);
 

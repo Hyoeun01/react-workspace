@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 
 const getAverage= numbers => {
     console.log("평균값 계산");
@@ -10,6 +10,7 @@ const getAverage= numbers => {
 function Average(props){
     const [list, setList]=useState([]);
     const [number, setNumber]=useState('');
+    const inputEl=useRef(null); // useRef를 사용하여 등록버튼을 클릭하면 자동으로 input에 포커스를 맞추도록한다
 
     const onChange = useCallback( e=>{
         setNumber(e.target.value);
@@ -19,7 +20,8 @@ function Average(props){
     const onInsert= useCallback(e => { 
         const nextList=list.concat(parseInt(number));
         setList(nextList);
-        setNumber('')
+        setNumber('');
+        inputEl.current.focus();
     },[number, list]);
 
     // const onChange = e => {
@@ -36,7 +38,7 @@ function Average(props){
 
     return (
         <div>
-            <input value={number} onChange={onChange} />
+            <input value={number} onChange={onChange} ref={inputEl} />
             <button onClick={onInsert}>등록</button>
             <ul>
                 {list.map((value,index) => (

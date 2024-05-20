@@ -28,8 +28,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <CommentList /> */}
       {/* <BoardList /> */}
       {/* <NotificationList /> */}
-      <Counter />
-      {/* <Info /> */}
+      {/* <Counter /> */}
+      <Info />
     </React.StrictMode>
   );
   //  },1000);

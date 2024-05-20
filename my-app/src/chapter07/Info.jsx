@@ -1,13 +1,13 @@
 import React, { useEffect, useReducer, useState } from "react";
-import useInputs from "./UseInputs";
+import useInputs from "./useInputs";
 
 
-function reducer(state, action){
-    return{
-        ...state,
-        [action.name]:action.value
-    };
-}
+// function reducer(state, action){
+//     return{
+//         ...state,
+//         [action.name]:action.value
+//     };
+// }
 function Info(){
     const [state, onChange]=useInputs({
         name:'', nickname:'', addr:'', phone:''

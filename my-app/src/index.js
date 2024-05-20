@@ -11,9 +11,10 @@ import Clock from './chapter04/Clock';
 import PropsEx from './chapter05/PropsEx';
 import CommentList from './chapter05/CommentList';
 import BoardList from './chapter05/BoardList';
+import NotificationList from './chapter06/NotificationList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
- setInterval(() => {
+ //setInterval(() => {
   root.render(
     <React.StrictMode>
       {/* <App /> */}
@@ -23,10 +24,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <Clock /> */}
       {/* <PropsEx /> */}
       {/* <CommentList /> */}
-      <BoardList />
+      {/* <BoardList /> */}
+      <NotificationList />
     </React.StrictMode>
   );
-    },1000);
+  //  },1000);
 
 
 // If you want to start measuring performance in your app, pass a function

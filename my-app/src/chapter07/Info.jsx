@@ -1,4 +1,6 @@
 import React, { useEffect, useReducer, useState } from "react";
+import useInputs from "./UseInputs";
+
 
 function reducer(state, action){
     return{
@@ -7,11 +9,14 @@ function reducer(state, action){
     };
 }
 function Info(){
-    const [state, dispatch]=useReducer(reducer,{
+    const [state, onChange]=useInputs({
         name:'', nickname:'', addr:'', phone:''
     });
+    // const [state, dispatch]=useReducer(reducer,{
+    //     name:'', nickname:'', addr:'', phone:''
+    // });
     const {name,nickname,addr,phone}=state;
-    const onChange = e =>{ dispatch(e.target); };
+    // const onChange = e =>{ dispatch(e.target); };
 
     return(
         <div>

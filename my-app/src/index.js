@@ -30,8 +30,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <BoardList /> */}
       {/* <NotificationList /> */}
       {/* <Counter /> */}
-      {/* <Info /> */}
-      <Average />
+      <Info />
+      {/* <Average /> */}
     </React.StrictMode>
   );
   //  },1000);

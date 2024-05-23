@@ -25,12 +25,23 @@ function LoginControl(props){
         setIsLoggedIn(false);
     }
     
+    /*
+    인라인(inline) 조건
+
+    - 인라인 : 코드를 별도 분리된 곳에 작성하지 않고 필요한 곳 안에 직접 넣기
+    - 인라인 조건 : 조건문을 코드안에 집어넣는 것
+    */
+    // 인라인 if-else 보기
     let button;
-    if(isLoggedIn){
-        button=<LogoutButton onClick={handleLogoutClick} />;
-    } else {
-        button=<LoginButton onClick={handleLoginClick} />;
+    {button = isLoggedIn
+        ? <LogoutButton onClick={handleLogoutClick} />
+        : <LoginButton onClick={handleLoginClick} />
     }
+    // if(isLoggedIn){
+    //     button=<LogoutButton onClick={handleLogoutClick} />;
+    // } else {
+    //     button=<LoginButton onClick={handleLoginClick} />;
+    // }
     
     return (
         <div>

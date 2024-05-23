@@ -13,10 +13,12 @@ function GuestGreeting(props){
 function Greeting(props){ // props를 전달 안하면 isLoggedIn 가 falsy이므로 GuestGreeting이 호출된다
     // Truthy : true는 아니지만 true로 여겨지는 값 / Falsy : false는 아니지만 false로 여겨지는 값
     const isLoggedIn=props.isLoggedIn;
-    if(isLoggedIn){
-        return <UserGreeting />;
-    }
-    return <GuestGreeting />;
+    return isLoggedIn ? <UserGreeting /> : <GuestGreeting />
+    // if(isLoggedIn){
+    // return isLoggedIn && <UserGreeting />;
+    // }
+
+    // return <GuestGreeting />;
 }
 
 export default Greeting;

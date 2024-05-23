@@ -1,7 +1,7 @@
 import React from "react";
 
 function UserGreeting(props){
-    return <h1>다시 오셨군용</h1>
+    return <h1>오셨군용</h1>
 }
 
 function GuestGreeting(props){

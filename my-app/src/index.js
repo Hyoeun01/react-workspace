@@ -23,6 +23,7 @@ import Toggle2 from './chapter08/Toggle2';
 import Say from './chapter08/Say';
 import EventPractice from './chapter08/EventPractice';
 import Greeting from './chapter09/Greeting';
+import LoginControl from './chapter09/LoginControl';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -47,7 +48,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <Toggle2 /> */}
       {/* <Say /> */}
       {/* <EventPractice /> */}
-      <Greeting />
+      {/* <Greeting /> */}
+      <LoginControl />
     </React.StrictMode>
   );
   //  },1000);

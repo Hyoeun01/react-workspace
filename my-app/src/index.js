@@ -25,6 +25,7 @@ import EventPractice from './chapter08/EventPractice';
 import Greeting from './chapter09/Greeting';
 import LoginControl from './chapter09/LoginControl';
 import MainPage from './chapter09/MainPage';
+import LandingPage from './chapter09/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -51,7 +52,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <EventPractice /> */}
       {/* <Greeting /> */}
       {/* <LoginControl /> */}
-      <MainPage />
+      {/* <MainPage /> */}
+      <LandingPage />
     </React.StrictMode>
   );
   //  },1000);

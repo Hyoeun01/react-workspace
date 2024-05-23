@@ -29,6 +29,7 @@ import LandingPage from './chapter09/LandingPage';
 import NumberList from './chapter10/NumberList';
 import StudentItemList from './chapter10/StudentItemList';
 import IterationSample from './chapter10/IterationSample';
+import BoardSample from './chapter10/BoardSample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -59,7 +60,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <LandingPage /> */}
       {/* <NumberList /> */}
       {/* <StudentItemList /> */}
-      <IterationSample />
+      {/* <IterationSample /> */}
+      <BoardSample />
     </React.StrictMode>
   );
   //  },1000);

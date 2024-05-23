@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 
-// 제어 컴포넌트 : 사용자의 입력을 직접적으로 제어할 수 있다
-function NameForm(props){
-    const [value, setValue] = useState('');
+function RequestForm(props){
+    const [value, setValue] = useState('요청사항을 입력하세요');
 
     const handleChange = (event) => {
-        setValue(event.target.value.toUpperCase()); // toUpperCase() : 캡스락없이도 대문자만 나오게된다
+        setValue(event.target.value); 
     }
 
     const handleSubmit = (event) => {
-        alert(`입력한 이름 : ${value}` ); // 백틱에 넣어도됩니다
+        alert('입력한 요청사항 : ' + value ); 
         event.prevantDefault();
     }
 
     return (
         <form onSubmit={handleSubmit}>
             <label>
-                이름:
+                요청사항:
                 <input type="text" value={value} onChange={handleChange} />
             </label>
             <button type="submit">제출하기</button>
@@ -24,4 +23,4 @@ function NameForm(props){
     );
 }
 
-export default NameForm;
+export default RequestForm;

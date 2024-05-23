@@ -31,6 +31,7 @@ import StudentItemList from './chapter10/StudentItemList';
 import IterationSample from './chapter10/IterationSample';
 import BoardSample from './chapter10/BoardSample';
 import NameForm from './chapter11/NameForm';
+import RequestForm from './chapter11/RequestForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -63,7 +64,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <StudentItemList /> */}
       {/* <IterationSample /> */}
       {/* <BoardSample /> */}
-      <NameForm />
+      {/* <NameForm /> */}
+      <RequestForm />
     </React.StrictMode>
   );
   //  },1000);

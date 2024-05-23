@@ -5,7 +5,7 @@ const styles={
         padding : 16 ,
         display : "flex" ,
         flexDirection : "row" ,
-        borderBotton : "1px solid grey"
+        borderBottom : "1px solid grey"
     },
     greeting : {
         marginRight : 8

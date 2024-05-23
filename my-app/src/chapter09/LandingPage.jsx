@@ -17,7 +17,7 @@ function LandingPage(props){
             onClickLogin={onClickLogin}
             onClickLogout={onClickLogout}
             />
-            <div style={{ padding:16 }}>리액트 공부 하기싫다.. ..</div>
+            <div style={{ padding:16 }}>...</div>
         </div>
     )
 }

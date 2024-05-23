@@ -15,10 +15,10 @@ function BoardSample(props){
 
     const boardList = boards.map(board =>
         <div key={board.id} onDoubleClick={() => onRemove(board.id)}>
-            <div>name : {board.name}</div>
-            <div>title : {board.title}</div>
-            <div>content : {board.content}</div>
-            <hr/>
+            <div>이름 : {board.name}</div>
+            <div>제목 : {board.title}</div>
+            <div>내용 : {board.content}</div>
+            <hr/><hr />
         </div>
     )
 
@@ -48,9 +48,9 @@ function BoardSample(props){
     };
 
     return (<>
-            <input placeholder="Name" value={inputName} onChange={onChangeName} />
-            <input placeholder="Title" value={inputTitle} onChange={onChangeTitle} />
-            <input placeholder="Content" value={inputContent} onChange={onChangeContent} />
+            <input placeholder="이름" value={inputName} onChange={onChangeName} />
+            <input placeholder="제목" value={inputTitle} onChange={onChangeTitle} />
+            <input placeholder="내용" value={inputContent} onChange={onChangeContent} />
             <button onClick={onClick}>추가</button>
             <ul>{boardList}</ul>
     </>)

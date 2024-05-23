@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function InterationSample(props){
+function IterationSample(props){
     const [names, setNames] = useState ([
         {id : 1, text : '사과'},
         {id : 2, text : '수박'},
@@ -22,12 +22,18 @@ function InterationSample(props){
         setInputText('');
     }
 
-    const nameList = names.map( name => <li id={name.id}>{name.text}</li>)
-    return <>
+    // 데이터 제거부분
+    const onRemove = id =>{
+        const nextNames = names.filter(name => name.id !== id );
+        setNames(nextNames)
+    };
+
+    const nameList = names.map( name => <li id={name.id} onDoubleClick={() => onRemove(name.id)}>{name.text}</li>)
+    return (<>
     <input value = {inputText} onChange={onChange} />
-    <button onClick={onclick}>추가</button>
+    <button onClick={onClick}>추가</button>
     <ul>{nameList}</ul>
-    </>;
+    </>)
 }
 
-export default InterationSample;
+export default IterationSample;

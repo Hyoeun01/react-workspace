@@ -33,6 +33,7 @@ import BoardSample from './chapter10/BoardSample';
 import NameForm from './chapter11/NameForm';
 import RequestForm from './chapter11/RequestForm';
 import SignupForm from './chapter11/SignupForm';
+import SignUp2 from './chapter11/Signup2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -67,7 +68,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <BoardSample /> */}
       {/* <NameForm /> */}
       {/* <RequestForm /> */}
-      <SignupForm />
+      {/* <SignupForm /> */}
+      <SignUp2 />
     </React.StrictMode>
   );
   //  },1000);

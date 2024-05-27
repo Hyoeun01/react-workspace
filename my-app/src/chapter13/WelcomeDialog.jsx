@@ -1,12 +1,21 @@
 import React from "react";
 import FancyBorder from "./FancyBorder";
 
-function WelcomeDialog(props){
+function Dialog(props){
     return (
         <FancyBorder color="blue">
-            <h1 className="Dialog-title">어서오세요</h1>
-            <p className="Dialog-message">우리 사이트에 방문하신 것을 환영</p>
+            <h1 className="Dialog-title">{props.title}</h1>
+            <p className="Dialog-message">{props.message}</p>
         </FancyBorder>
+    )
+
+}
+function WelcomeDialog(props){
+    return (
+        <div>
+        <Dialog title="어서오세요" message="안반갑지롱"/>        
+        <Dialog title="어서올거임?" message="나가렴"/> 
+        </div>
     );
 }
 

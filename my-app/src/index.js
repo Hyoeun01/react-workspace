@@ -36,6 +36,8 @@ import SignupForm from './chapter11/SignupForm';
 import SignUp2 from './chapter11/Signup2';
 import Calculator from './chapter12/Calculator';
 import WelcomeDialog from './chapter13/WelcomeDialog';
+import ProfileCard from './chapter13/ProfileCard';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -74,7 +76,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <SignupForm /> */}
       {/* <SignUp2 /> */}
       {/* <Calculator /> */}
-      <WelcomeDialog />
+      {/* <WelcomeDialog /> */}
+      <ProfileCard />
     </React.StrictMode>
   );
   //  },1000);

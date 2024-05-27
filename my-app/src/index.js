@@ -39,6 +39,7 @@ import WelcomeDialog from './chapter13/WelcomeDialog';
 import ProfileCard from './chapter13/ProfileCard';
 import DarkOrLight from './chapter14/DarkOrLight';
 import MainPage1 from './chapter15/MainPage1';
+import Blocks from './chapter15/Blocks';
 
 
 
@@ -81,8 +82,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <WelcomeDialog /> */}
       {/* <ProfileCard /> */}
       {/* <DarkOrLight /> */}
-      <MainPage1 />
-    
+      {/* <MainPage1 /> */}
+    <Blocks />
     </React.StrictMode>
   );
   //  },1000);

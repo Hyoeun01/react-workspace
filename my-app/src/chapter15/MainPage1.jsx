@@ -20,7 +20,7 @@ const RoundedButton = styled(Button)`
 function MainPage1(props){
     return (
         <Wrapper>
-            <Title> 리액트가 재미없는게 아니라 수업이...... </Title>
+            <Title> 아무리 그래도 이렇게 쓰면 안되겠지 </Title>
             <Button>White</Button>
             <Button dark>Dark</Button>
 

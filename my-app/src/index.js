@@ -38,6 +38,7 @@ import Calculator from './chapter12/Calculator';
 import WelcomeDialog from './chapter13/WelcomeDialog';
 import ProfileCard from './chapter13/ProfileCard';
 import DarkOrLight from './chapter14/DarkOrLight';
+import MainPage1 from './chapter15/MainPage1';
 
 
 
@@ -79,7 +80,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <Calculator /> */}
       {/* <WelcomeDialog /> */}
       {/* <ProfileCard /> */}
-      <DarkOrLight />
+      {/* <DarkOrLight /> */}
+      <MainPage1 />
+    
     </React.StrictMode>
   );
   //  },1000);

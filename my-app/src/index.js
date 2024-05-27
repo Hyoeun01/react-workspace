@@ -35,6 +35,8 @@ import RequestForm from './chapter11/RequestForm';
 import SignupForm from './chapter11/SignupForm';
 import SignUp2 from './chapter11/Signup2';
 import Calculator from './chapter12/Calculator';
+import TemperatureInput from './chapter12/TemperatureInput';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -72,6 +74,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <SignupForm /> */}
       {/* <SignUp2 /> */}
       <Calculator />
+      {/* <TemperatureInput /> */}
     </React.StrictMode>
   );
   //  },1000);

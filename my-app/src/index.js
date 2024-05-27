@@ -37,6 +37,7 @@ import SignUp2 from './chapter11/Signup2';
 import Calculator from './chapter12/Calculator';
 import WelcomeDialog from './chapter13/WelcomeDialog';
 import ProfileCard from './chapter13/ProfileCard';
+import DarkOrLight from './chapter14/DarkOrLight';
 
 
 
@@ -77,7 +78,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <SignUp2 /> */}
       {/* <Calculator /> */}
       {/* <WelcomeDialog /> */}
-      <ProfileCard />
+      {/* <ProfileCard /> */}
+      <DarkOrLight />
     </React.StrictMode>
   );
   //  },1000);

@@ -34,6 +34,7 @@ import NameForm from './chapter11/NameForm';
 import RequestForm from './chapter11/RequestForm';
 import SignupForm from './chapter11/SignupForm';
 import SignUp2 from './chapter11/Signup2';
+import Calculator from './chapter12/Calculator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  //setInterval(() => {
@@ -69,7 +70,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
       {/* <NameForm /> */}
       {/* <RequestForm /> */}
       {/* <SignupForm /> */}
-      <SignUp2 />
+      {/* <SignUp2 /> */}
+      <Calculator />
     </React.StrictMode>
   );
   //  },1000);

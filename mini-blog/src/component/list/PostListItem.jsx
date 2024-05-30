@@ -23,7 +23,7 @@ const TitleText = styled.p`
 function PostListItem(props){
     const {post, onClick} = props;
     return (
-        <Wrapper onClick={onclick}>
+        <Wrapper onClick={onClick}>
             <TitleText>{post.title}</TitleText>
         </Wrapper>
     );

@@ -3,6 +3,7 @@ import './App.css';
 import { Link, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/info" element={<About />} />
+      <Route path="/profile/:username" element={<Profile />} />
       </Routes>
     </div>
   );

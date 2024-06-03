@@ -49,7 +49,10 @@ function PostViewPage(props) {
     return (
         <Wrapper>
             <Container>
-                <Button title="뒤로가기" onClick={() => {navigate("/")}} />
+                <Button title="뒤로가기" onClick={() => {navigate("/") }} />
+                <Button title="수정" onClick={() => { navigate('/'); }} />
+                <Button title="삭제" onClick={() => { navigate('/'); }}/>
+
                 <PostContainer>
                     <TitleText>{post.title}</TitleText>
                     <ContentText>{post.content}</ContentText>

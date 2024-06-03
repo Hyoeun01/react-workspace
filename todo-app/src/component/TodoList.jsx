@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 import "./TodoList.css";
 
 const TodoList=({ todo, onUpdate, onDelete }) =>{
     const [search, setSearch] = useState(""); 
-    const onChangeSearch = (e) => { // 
+    const onChangeSearch = (e) => { //
         setSearch(e.target.value);
     };
     

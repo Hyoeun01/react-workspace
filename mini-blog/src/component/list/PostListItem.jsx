@@ -14,19 +14,21 @@ const Wrapper = styled.div`
     background : white;
     :hover {
         background : lightgrey;
-    }` ;
+    }
+`;
 
 const TitleText = styled.p`
     font-size : 20px;
-    font-weight: 50px `;
+    font-weight : 50px
+`;
 
 function PostListItem(props){
-    const {post, onClick} = props;
+    const { post, onClick } = props;
+
     return (
-        <Wrapper onClick={onClick}>
+        <Wrapper onClick = {onClick}>
             <TitleText>{post.title}</TitleText>
         </Wrapper>
     );
 }
-
 export default PostListItem;

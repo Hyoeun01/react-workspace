@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    width : calc(100% - 32px);
+    width : calc(100%-32px);
     padding : 8px 16px;
     display : flex;
     flex-direction : column;
@@ -14,21 +14,20 @@ const Wrapper = styled.div`
     background : white;
     :hover {
         background : lightgrey;
-    }` ;
-
+    }
+`;
 const ContentText = styled.p`
     font-size : 16px;
-    white-space:pre-wrap; 
-    `;
+    white-space : pre-wrap;
+`;
 
 function CommentListItem(props){
     const {comment} = props;
 
-    return (
+    return(
         <Wrapper>
-            <ContentText>{comment.content}</ContentText>
+            <ContentText>{ comment.content }</ContentText>
         </Wrapper>
     );
 }
-
 export default CommentListItem;

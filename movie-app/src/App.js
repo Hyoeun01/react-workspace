@@ -2,11 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import MovieList from './components/MovieList';
 import { useEffect, useState } from 'react';
-
-
+import MovieListHeading from './components/MovieListHeading';
+import SearchBox from './components/SearchBox';
 
 function App() {
-  const [movies, setMovies] = useState([
+  const [searchValue, setSearchValue] = useState('');
+  const [movies, setMovies] = useState([]
     // {
     //   Title: "The Amazing Spider-Man",
     //   Year: "2012",
@@ -28,7 +29,7 @@ function App() {
     //   Type: "series",
     //   Poster: "https://m.media-amazon.com/images/M/MV5BYWU1YTA4OGUtNjcxMC00ZTllLTgxYWUtY2U5NmViZTU0MmNjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_SX300.jpg"
     // }
-  ]);
+  );
 
   const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=6acde185`;
@@ -37,18 +38,28 @@ function App() {
     const responseJson = await response.json();
   
     console.log(responseJson);
+
+    if(responseJson.Search) {
+      setMovies(responseJson.Search)
+    }
   };
 
   useEffect(() => {
-    getMovieRequest("star");
-  }, []);
+    if (searchValue.length > 3) {
+      getMovieRequest(searchValue);
+    }
+  }, [searchValue]);
 
 
   return (
     <div className='container-fluid movie-app'>
+       <div className='row align-items-center my-4'>
+        <MovieListHeading heading='Movies' />
+        <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
+      </div>
       <div className="row">
-        {/* <MovieList movies={movies} /> */}
-        </div>
+      <MovieList movies={movies} />
+      </div>
     </div>
   );
 }

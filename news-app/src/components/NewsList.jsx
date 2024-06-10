@@ -25,14 +25,15 @@ const NewsListBlock = styled.div`
     //     urlToImage : "https://via.placeholder.com/106"
     // }
 
-const NewsList = () => {
+const NewsList = ({category}) => {
     const [ articles, setArticles] = useState(null);
     const [ loading, setLoading] = useState(false);
     useEffect( () => {
         const fetchData = async () => {
         setLoading(true);
         try{
-            const response = await axios.get('https://newsapi.org/v2/top-headlines?country=kr&apiKey=0a73df22dd97449da35c324fc4f2c139');
+            const query=category==='all' ? '' : `&category=${category}`;
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=0a73df22dd97449da35c324fc4f2c139`);
             setArticles(response.data.articles);
         } catch (e) {
             console.error(e);
@@ -40,7 +41,7 @@ const NewsList = () => {
         setLoading(false);
     };
     fetchData();
-},[]);
+},[category]);
 
 if(loading){
     return <NewsListBlock>로딩중..........</NewsListBlock>

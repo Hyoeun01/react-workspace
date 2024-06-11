@@ -6,6 +6,7 @@ import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 
 function App() {
+  const [favourites, setFavourites] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [movies, setMovies] = useState([]
     // {
@@ -50,16 +51,46 @@ function App() {
     }
   }, [searchValue]);
 
+  useEffect(() => {
+    const movieFavourites = JSON.parse(localStorage.getItem('favourites'));
+    if (movieFavourites) {
+      setFavourites(movieFavourites);
+    }
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('favourites', JSON.stringify(items));
+  };
+
+  const addFavouriteMovie = (movie) => {
+    const newList = [...favourites, movie];
+    setFavourites(newList);
+    saveToLocalStorage(newList);
+  };
+
+  const removeMovie = (movie) => {
+    const newList = favourites.filter(
+      (favourite) => favourite.imdbID !== movie.imdbID
+    );
+
+    setFavourites(newList);
+    saveToLocalStorage(newList);
+  };
+
 
   return (
     <div className='container-fluid movie-app'>
        <div className='row align-items-center my-4'>
-        <MovieListHeading heading='Movies' />
+        <MovieListHeading heading='영화 검색과 선호작 등록' />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
       </div>
       <div className="row">
-      <MovieList movies={movies} />
+      <MovieList movies={movies} handleClick={addFavouriteMovie} addMovie={true}/>
       </div>
+      <div className='row align-items-center my-4'>
+        <MovieListHeading heading='내 선호작' />
+        <MovieList movies={favourites} addMovie={false} handleClick={removeMovie}/>
+        </div>
     </div>
   );
 }

@@ -89,7 +89,7 @@ function App() {
       </div>
       <div className='row align-items-center my-4'>
         <MovieListHeading heading='내 선호작' />
-        <MovieList movies={favourites} addMovie={false} handleClick={removeMovie}/>
+        <MovieList movies={favourites} handleClick={removeMovie} addMovie={false} />
         </div>
     </div>
   );

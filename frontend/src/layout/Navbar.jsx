@@ -22,7 +22,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto mb-2 mt-2 nb-lg-0">
             <li className="nav-item">
-              <Link to="/adduser" className="btn btn-outline-light">
+              <Link to="/adduser" className="btn btn-outline-light mb-2">
                 유저추가
               </Link>
             </li>

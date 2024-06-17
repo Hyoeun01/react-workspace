@@ -18,21 +18,21 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/adduser" element={<AddUser />} />
           <Route path="/edituser/:id" element={<EditUser />} />
           <Route path="/viewuser/:id" element={<ViewUser />} />
-        </Routes> */}
+        </Routes>
 
-        <NavbarBoard />
+        {/* <NavbarBoard />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/addboard" element={<AddBoard />} />
           <Route path="/editboard/:bno" element={<EditBoard />} />
           <Route path="/viewboard/:bno" element={<ViewBoard />} />
-        </Routes>
+        </Routes> */}
       </BrowserRouter>
     </div>
   );

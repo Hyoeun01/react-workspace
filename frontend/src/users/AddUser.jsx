@@ -20,8 +20,8 @@ function AddUser() {
   };
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8082/user", user);
-    navigate("/");
+    await axios.post('http://localhost:8082/user', user);
+    navigate('/');
   };
 
   return (

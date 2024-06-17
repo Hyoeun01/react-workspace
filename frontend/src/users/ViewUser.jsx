@@ -41,7 +41,7 @@ function ViewUser() {
             </div>
           </div>
           <Link className="btnbtn-primary my-2" to={"/"}>
-            돌아기기
+            돌아가기
           </Link>
         </div>
       </div>

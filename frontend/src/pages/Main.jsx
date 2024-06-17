@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Home() {
-  const [users, setUsers] = useState([]);
+function Main() {
+  const [boards, setBoards] = useState([]);
 
   // 리스트보기
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8082/users");
-    setUsers(result.data);
+    const result = await axios.get("http://localhost:8082/boards");
+    setBoards(result.data);
     // console.log(result);
   };
 
@@ -17,9 +17,9 @@ function Home() {
   }, []);
 
   // 삭제하기
-  const deleteUser = async (id) => {
-    if (window.confirm(`${id}번 게시물을 삭제하시겠습니까?`)) {
-      await axios.delete(`http://localhost:8082/user/${id}`);
+  const deleteUser = async (bno) => {
+    if (window.confirm(`${bno}번 게시물을 삭제하시겠습니까?`)) {
+      await axios.delete(`http://localhost:8082/board/${bno}`);
       loadUsers();
     }
   };
@@ -30,33 +30,37 @@ function Home() {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">이름</th>
-            <th scope="col">별명</th>
-            <th scope="col">이메일</th>
+            <th scope="col">제목</th>
+            <th scope="col">내용</th>
+            <th scope="col">작성자</th>
+            <th scope="col">조회수</th>
+            <th scope="col">작성일</th>
             <th scope="col">액션</th>
           </tr>
         </thead>
-        {users.map((user, index) => (
+        {boards.map((board, index) => (
           <tr key={index}>
             <th scope="row">{index + 1}</th>
-            <th>{user.name}</th>
-            <th>{user.username}</th>
-            <th>{user.email}</th>
+            <th>{board.title}</th>
+            <th>{board.content}</th>
+            <th>{board.writer}</th>
+            <th>{board.hit}</th>
+            <th>{board.createTime}</th>
             <th>
               <Link
-                to={`viewuser/${user.id}`}
+                to={`viewboard/${board.bno}`}
                 className="btn btn-outline-secondary mx-2"
               >
                 보기
               </Link>
               <Link
-                to={`edituser/${user.id}`}
+                to={`editboard/${board.bno}`}
                 className="btn btn-outline-warning mx-2"
               >
                 수정
               </Link>
               <button
-                onClick={() => deleteUser(user.id)}
+                onClick={() => deleteUser(board.bno)}
                 className="btn btn-outline-danger mx-2"
               >
                 삭제
@@ -69,4 +73,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Main;

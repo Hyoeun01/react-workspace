@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function NavbarBoard() {
   return (
     <nav className="navbar navbar-expand-md bg-body-tertiary">
       <div className="container-fluid navbar-dark bg-primary">
         <Link to="/" className="navbar-brand text-warning" href="#">
-          리액트 & 스프링부트
+          나만의 게시판
         </Link>
         <button
           className="navbar-toggler"
@@ -22,8 +22,8 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto mb-2 mt-2 nb-lg-0">
             <li className="nav-item">
-              <Link to="/adduser" className="btn btn-outline-light">
-                유저추가
+              <Link to="/addboard" className="btn btn-outline-light">
+                게시글 작성
               </Link>
             </li>
           </ul>
@@ -32,4 +32,4 @@ function Navbar() {
     </nav>
   );
 }
-export default Navbar;
+export default NavbarBoard;

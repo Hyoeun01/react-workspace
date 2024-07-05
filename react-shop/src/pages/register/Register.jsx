@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import User from "../../model/User";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerService } from "../../Services/auth.service";
+import { registerService } from "../../service/auth.service";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import "./Register.css";
@@ -46,7 +46,7 @@ const Register = () => {
         .catch((error)=>{
             console.log(error);
             if(error?.response?.status === 409){
-                setErrorMessage("username 또는 password를 잘못 입력했습니다")
+                setErrorMessage("username이 중복됩니다")
             } else {
                 setErrorMessage("예상하지 못한 에러가 발생했습니다")
             }
@@ -75,7 +75,7 @@ const Register = () => {
                     <div className='form-group mb-2'>
                         <label htmlFor='name'>패스워드</label>
                         <input type='password' name='password' className='form-control'
-                        placeholder='name' value={user.password} onChange={handleChange} required />
+                        placeholder='password' value={user.password} onChange={handleChange} required />
                         <div className='invalid-feedback'>비밀번호를 입력하세요</div>
                     </div>
                     <button className='btn btn-info text-white w-100 mt-3' disabled={loading}>

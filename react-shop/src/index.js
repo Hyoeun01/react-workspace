@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from 'react-redux';
-import store from './store/configStore';
+
+import { handleResponseWithLoginCheck } from './service/base.service';
+import { store } from './store/configStore';
+
+handleResponseWithLoginCheck();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
